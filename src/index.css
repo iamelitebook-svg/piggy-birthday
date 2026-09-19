@@ -14,3 +14,1056 @@ body,
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* =========================================
+   FLOATING HEARTS
+========================================= */
+
+.floating-heart {
+  position: absolute;
+  bottom: -50px;
+  opacity: 0;
+  animation: floatHeart 8s linear infinite;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(0.7) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  90% {
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(-110vh) scale(1.2) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   GLOWING BACKGROUND
+========================================= */
+
+.animate-glow {
+  animation: glowMove 7s ease-in-out infinite;
+}
+
+.animate-glow-delay {
+  animation: glowMove 9s ease-in-out infinite reverse;
+}
+
+@keyframes glowMove {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translate(80px, 40px) scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+
+/* =========================================
+   WRONG PASSWORD SHAKE
+========================================= */
+
+.animate-shake {
+  animation: shake 0.45s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(-10px);
+  }
+
+  40% {
+    transform: translateX(10px);
+  }
+
+  60% {
+    transform: translateX(-7px);
+  }
+
+  80% {
+    transform: translateX(7px);
+  }
+}
+
+
+/* =========================================
+   PAGE EXIT
+========================================= */
+
+.welcome-exit {
+  animation: welcomeExit 0.9s ease forwards;
+}
+
+@keyframes welcomeExit {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+}
+
+
+/* =========================================
+   ANIMATION DELAYS
+========================================= */
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-1500 {
+  animation-delay: 1.5s;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-3000 {
+  animation-delay: 3s;
+}
+
+/* =========================================
+   BIRTHDAY TITLE
+========================================= */
+
+.birthday-title {
+  animation: birthdayTitle 1.2s ease-out;
+}
+
+@keyframes birthdayTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.85);
+  }
+
+  60% {
+    transform: translateY(-5px) scale(1.03);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================
+   GRADIENT TEXT
+========================================= */
+
+.birthday-gradient {
+  background: linear-gradient(
+    90deg,
+    #f9a8d4,
+    #fb7185,
+    #fda4af,
+    #c4b5fd,
+    #f9a8d4
+  );
+
+  background-size: 300% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+
+  animation: gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 300% center;
+  }
+}
+
+
+/* =========================================
+   CAKE
+========================================= */
+
+.birthday-cake {
+  animation: cakeBounce 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 25px rgba(244, 114, 182, 0.3));
+}
+
+@keyframes cakeBounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.birthday-name {
+  animation: nameReveal 1.5s ease-out;
+}
+
+@keyframes nameReveal {
+  0% {
+    opacity: 0;
+    letter-spacing: 15px;
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    letter-spacing: normal;
+    filter: blur(0);
+  }
+}
+
+
+/* =========================================
+   BALLOONS
+========================================= */
+
+.birthday-balloon {
+  bottom: -100px;
+  opacity: 0.7;
+
+  animation-name: balloonFloat;
+  animation-duration: 8s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes balloonFloat {
+  0% {
+    transform: translateY(0) rotate(-5deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translateY(-50vh) rotate(5deg);
+  }
+
+  90% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(-110vh) rotate(-5deg);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+.birthday-confetti {
+  position: absolute;
+  top: -30px;
+
+  font-size: 14px;
+
+  opacity: 0;
+
+  animation-name: confettiFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.7;
+  }
+
+  90% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* =========================================
+   MESSAGE FLOATING ELEMENTS
+========================================= */
+
+.message-heart {
+  position: absolute;
+  bottom: -40px;
+
+  font-size: 22px;
+  color: rgba(251, 182, 206, 0.35);
+
+  animation: messageFloat 9s linear infinite;
+}
+
+@keyframes messageFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  90% {
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(-110vh) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   ENVELOPE
+========================================= */
+
+.envelope-wrapper {
+  position: relative;
+
+  width: 280px;
+  height: 190px;
+
+  margin: 0 auto;
+
+  perspective: 1000px;
+}
+
+
+.envelope {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+}
+
+
+.group:hover .envelope {
+  transform: translateY(-8px) rotateX(4deg);
+  filter: drop-shadow(0 20px 25px rgba(244, 114, 182, 0.2));
+}
+
+
+/* Envelope body */
+
+.envelope-back {
+  position: absolute;
+  inset: 0;
+
+  border-radius: 8px;
+
+  background: linear-gradient(
+    135deg,
+    #fda4af,
+    #fb7185
+  );
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Letter inside */
+
+.envelope-paper {
+  position: absolute;
+
+  left: 15%;
+  right: 15%;
+
+  top: 12%;
+
+  height: 78%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 5px;
+
+  background: #fffafa;
+
+  color: #9f1239;
+
+  font-family: Georgia, serif;
+
+  font-size: 18px;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.group:hover .envelope-paper {
+  transform: translateY(-15px);
+}
+
+
+/* Front folds */
+
+.envelope-front {
+  position: absolute;
+
+  inset: 0;
+
+  background: #fb7185;
+
+  clip-path: polygon(
+    0 0,
+    50% 55%,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+
+  border-radius: 8px;
+}
+
+
+/* Top flap */
+
+.envelope-flap {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 58%;
+
+  background: #f43f5e;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    50% 100%
+  );
+
+  transform-origin: top center;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.group:hover .envelope-flap {
+  transform: rotateX(20deg);
+}
+
+
+/* Heart seal */
+
+.envelope-heart {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  display: flex;
+
+  height: 52px;
+  width: 52px;
+
+  align-items: center;
+  justify-content: center;
+
+  transform: translate(-50%, -15%);
+
+  border-radius: 999px;
+
+  background: #fff;
+
+  font-size: 22px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.group:hover .envelope-heart {
+  transform: translate(-50%, -15%) scale(1.12);
+}
+
+
+/* =========================================
+   LETTER CARD
+========================================= */
+
+.letter-card {
+  animation: letterOpen 0.8s ease-out;
+}
+
+
+@keyframes letterOpen {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.94) rotateX(8deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0);
+  }
+}
+
+
+/* =========================================
+   TYPEWRITER CURSOR
+========================================= */
+
+.typewriter-cursor {
+  display: inline-block;
+
+  margin-left: 2px;
+
+  color: #e11d48;
+
+  animation: cursorBlink 0.7s step-end infinite;
+}
+
+
+@keyframes cursorBlink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   SIGNATURE
+========================================= */
+
+.letter-signature {
+  animation: signatureAppear 1s ease-out;
+}
+
+
+@keyframes signatureAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   CONTINUE BUTTON
+========================================= */
+
+.message-continue {
+  animation: continueAppear 0.8s ease-out;
+}
+
+
+@keyframes continueAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   GALLERY FLOATING ELEMENTS
+========================================= */
+
+.gallery-floating {
+  position: absolute;
+  bottom: -40px;
+
+  font-size: 22px;
+
+  color: rgba(251, 182, 206, 0.35);
+
+  animation: galleryFloat 10s linear infinite;
+}
+
+@keyframes galleryFloat {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  90% {
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(-110vh) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   POLAROID
+========================================= */
+
+.polaroid {
+  position: relative;
+
+  background: #fff;
+
+  padding: 10px;
+  padding-bottom: 0;
+
+  border-radius: 3px;
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.25);
+
+  opacity: 0;
+
+  animation: polaroidAppear 0.8s ease-out forwards;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.polaroid:hover {
+  z-index: 10;
+
+  transform:
+    rotate(0deg)
+    translateY(-12px)
+    scale(1.04);
+
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+@keyframes polaroidAppear {
+  0% {
+    opacity: 0;
+    transform:
+      translateY(40px)
+      rotate(0deg)
+      scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================
+   PHOTO IMAGE
+========================================= */
+
+.polaroid img {
+  display: block;
+
+  filter: saturate(0.95);
+
+  transition:
+    filter 0.5s ease,
+    transform 0.7s ease;
+}
+
+
+.polaroid:hover img {
+  filter: saturate(1.1);
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.fixed.inset-0 {
+  animation: modalAppear 0.3s ease-out;
+}
+
+
+@keyframes modalAppear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* =========================================
+   GIFT WRAPPER
+========================================= */
+
+.gift-wrapper {
+  position: relative;
+
+  width: 220px;
+  height: 210px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+.gift-button:hover .gift-wrapper {
+  transform: translateY(-10px) scale(1.04);
+}
+
+
+/* =========================================
+   GIFT GLOW
+========================================= */
+
+.gift-glow {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 999px;
+
+  background: rgba(244, 63, 94, 0.2);
+
+  filter: blur(40px);
+
+  animation: giftGlow 2.5s ease-in-out infinite;
+}
+
+
+@keyframes giftGlow {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+
+/* =========================================
+   GIFT BOX
+========================================= */
+
+.gift-box {
+  position: relative;
+
+  width: 150px;
+  height: 125px;
+
+  margin-top: 45px;
+}
+
+
+/* =========================================
+   GIFT BODY
+========================================= */
+
+.gift-body {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 150px;
+  height: 105px;
+
+  border-radius: 5px;
+
+  background: linear-gradient(
+    135deg,
+    #ec4899,
+    #e11d48
+  );
+
+  box-shadow:
+    0 20px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   VERTICAL RIBBON
+========================================= */
+
+.gift-ribbon-vertical {
+  position: absolute;
+
+  left: 50%;
+
+  width: 30px;
+  height: 100%;
+
+  transform: translateX(-50%);
+
+  background: rgba(253, 224, 71, 0.9);
+}
+
+
+/* =========================================
+   GIFT LID
+========================================= */
+
+.gift-lid {
+  position: absolute;
+
+  left: -8px;
+  top: -25px;
+
+  width: 166px;
+  height: 35px;
+
+  border-radius: 5px;
+
+  background: linear-gradient(
+    135deg,
+    #f472b6,
+    #fb7185
+  );
+
+  box-shadow:
+    0 8px 15px rgba(0, 0, 0, 0.25);
+
+  z-index: 5;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+/* =========================================
+   HORIZONTAL RIBBON
+========================================= */
+
+.gift-ribbon-horizontal {
+  position: absolute;
+
+  left: 0;
+  top: 7px;
+
+  width: 100%;
+  height: 20px;
+
+  background: rgba(253, 224, 71, 0.9);
+}
+
+
+/* =========================================
+   BOW
+========================================= */
+
+.gift-bow {
+  position: absolute;
+
+  left: 50%;
+  top: -65px;
+
+  width: 90px;
+  height: 50px;
+
+  transform: translateX(-50%);
+
+  z-index: 10;
+}
+
+
+.bow-left,
+.bow-right {
+  position: absolute;
+
+  top: 12px;
+
+  width: 42px;
+  height: 30px;
+
+  background: #facc15;
+
+  border-radius: 50% 50% 45% 45%;
+}
+
+
+.bow-left {
+  left: 0;
+
+  transform: rotate(-25deg);
+}
+
+
+.bow-right {
+  right: 0;
+
+  transform: rotate(25deg);
+}
+
+
+.bow-center {
+  position: absolute;
+
+  left: 50%;
+  top: 18px;
+
+  width: 25px;
+  height: 25px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: #fde047;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   GIFT HOVER
+========================================= */
+
+.gift-button:hover .gift-lid {
+  transform: translateY(-8px) rotate(-2deg);
+}
+
+
+.gift-button:active .gift-box {
+  transform: scale(0.95);
+}
+
+
+/* =========================================
+   SURPRISE CONFETTI
+========================================= */
+
+.surprise-confetti {
+  position: absolute;
+
+  top: -30px;
+
+  font-size: 16px;
+
+  animation-name: surpriseConfettiFall;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes surpriseConfettiFall {
+  0% {
+    transform:
+      translateY(0)
+      rotate(0deg)
+      scale(0.5);
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform:
+      translateY(110vh)
+      rotate(720deg)
+      scale(1.2);
+
+    opacity: 0;
+  }
+}
