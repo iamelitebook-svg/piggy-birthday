@@ -183,8 +183,8 @@ function Welcome({ onUnlock }) {
             There is a little surprise hidden behind
             this screen.
 
-            <span className="mt-1 block">
-              Only you know how to unlock it. 💝
+            <span className="mt-1 block text-lg">
+              Only you know those 4 magic letters. 💝
             </span>
 
           </p>
@@ -202,7 +202,7 @@ function Welcome({ onUnlock }) {
             <div className="rounded-2xl border border-white/10 bg-black/20 p-2 shadow-inner">
 
               <input
-                type="password"
+                type="text"
                 value={word}
                 disabled={unlocking}
                 onChange={(e) => {
@@ -211,7 +211,7 @@ function Welcome({ onUnlock }) {
                 }}
                 placeholder="Enter the secret word..."
                 autoComplete="off"
-                className="w-full rounded-xl border border-white/5 bg-white/[0.05] px-5 py-4 text-center text-white outline-none transition placeholder:text-pink-100/30 focus:border-pink-400/40 focus:bg-white/[0.08] focus:ring-2 focus:ring-pink-400/20"
+                className="w-full text-2xl rounded-xl border border-white/5 bg-white/[0.05] px-5 py-4 text-center text-white outline-none transition placeholder:text-pink-100/30 focus:border-pink-400/40 focus:bg-white/[0.08] focus:ring-2 focus:ring-pink-400/20"
               />
 
 

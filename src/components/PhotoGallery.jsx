@@ -57,7 +57,7 @@ function PhotoGallery({ onContinue }) {
     },
       {
     id: 8,
-    image: "/photos/photo8.jpeg",
+    image: "/photos/photo8.jpg",
     title: "Cozy Days",
     caption: "Warm drinks and even warmer company ☕",
     rotation: "rotate-2",
