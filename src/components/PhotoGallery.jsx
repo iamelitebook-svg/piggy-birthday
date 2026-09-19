@@ -1,85 +1,4 @@
-// function PhotoGallery({ onContinue }) {
-//   const photos = [
-//     {
-//       id: 1,
-//       title: "Beautiful Memory",
-//       image: "/photos/photo1.jpg",
-//     },
-//     {
-//       id: 2,
-//       title: "A Special Moment",
-//       image: "/photos/photo2.jpg",
-//     },
-//     {
-//       id: 3,
-//       title: "Best Memories",
-//       image: "/photos/photo3.jpg",
-//     },
-//   ];
 
-//   return (
-//     <section className="min-h-screen px-6 py-16">
-
-//       <div className="mx-auto max-w-6xl">
-
-//         <p className="text-center text-sm uppercase tracking-[0.35em] text-pink-300">
-//           Our memories
-//         </p>
-
-//         <h1 className="mt-4 text-center text-4xl font-bold sm:text-5xl">
-//           Little Moments 📸
-//         </h1>
-
-//         <p className="mx-auto mt-4 max-w-xl text-center text-pink-100/60">
-//           Some moments are too special to be forgotten.
-//         </p>
-
-//         <div className="mt-12 grid gap-6 md:grid-cols-3">
-
-//           {photos.map((photo) => (
-//             <div
-//               key={photo.id}
-//               className="group overflow-hidden rounded-3xl border border-white/10 bg-white/10 p-3 shadow-xl backdrop-blur-xl transition duration-500 hover:-translate-y-2"
-//             >
-
-//               <div className="aspect-square overflow-hidden rounded-2xl bg-pink-900/30">
-
-//                 <img
-//                   src={photo.image}
-//                   alt={photo.title}
-//                   className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-//                   onError={(e) => {
-//                     e.currentTarget.style.display = "none";
-//                   }}
-//                 />
-
-//               </div>
-
-//               <p className="px-2 py-4 text-center font-medium text-pink-100">
-//                 {photo.title} 💕
-//               </p>
-
-//             </div>
-//           ))}
-
-//         </div>
-
-//         <div className="text-center">
-//           <button
-//             onClick={onContinue}
-//             className="mt-10 rounded-full bg-white px-8 py-4 font-bold text-rose-600 shadow-xl transition hover:scale-105 active:scale-95"
-//           >
-//             One Last Surprise 🎁
-//           </button>
-//         </div>
-
-//       </div>
-
-//     </section>
-//   );
-// }
-
-// export default PhotoGallery;
 
 import { useState } from "react";
 
@@ -89,32 +8,62 @@ function PhotoGallery({ onContinue }) {
   const photos = [
     {
       id: 1,
-      image: "/photos/photo1.jpg",
+      image: "/photos/photo1.jpeg",
       title: "A Beautiful Moment",
       caption: "One of those moments worth remembering forever ❤️",
       rotation: "-rotate-2",
     },
     {
       id: 2,
-      image: "/photos/photo2.jpg",
+      image: "/photos/photo2.jpeg",
       title: "That Smile",
       caption: "A smile that can make everything feel better ✨",
       rotation: "rotate-2",
     },
     {
       id: 3,
-      image: "/photos/photo3.jpg",
+      image: "/photos/photo3.jpeg",
       title: "A Special Memory",
       caption: "Some memories simply stay in your heart 💕",
       rotation: "-rotate-1",
     },
-    // {
-    //   id: 4,
-    //   image: "/photos/photo4.jpg",
-    //   title: "Another Chapter",
-    //   caption: "Here's to all the beautiful moments ahead 🌸",
-    //   rotation: "rotate-3",
-    // },
+    {
+      id: 4,
+      image: "/photos/photo4.jpeg",
+      title: "Another Chapter",
+      caption: "Here's to all the beautiful moments ahead 🌸",
+      rotation: "rotate-3",
+    },
+    {
+      id: 5,
+      image: "/photos/photo5.jpeg",
+      title: "Chasing Sunsets",
+      caption: "Proof that endings can be beautiful too 🌅",
+      rotation: "-rotate-3",
+    },
+    {
+      id: 6,
+      image: "/photos/photo6.jpeg",
+      title: "Pure Joy",
+      caption: "Laughter is always better when shared with you 🪵",
+      rotation: "rotate-1",
+    },
+    {
+      id: 7,
+      image: "/photos/photo7.jpeg",
+      title: "By Your Side",
+      caption: "The best place in the world is right here 🗺️",
+      rotation: "-rotate-2",
+    },
+      {
+    id: 8,
+    image: "/photos/photo8.jpeg",
+    title: "Cozy Days",
+    caption: "Warm drinks and even warmer company ☕",
+    rotation: "rotate-2",
+  }
+
+
   ];
 
   return (
@@ -222,7 +171,7 @@ function PhotoGallery({ onContinue }) {
                   <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition duration-500 group-hover:bg-black/30">
 
                     <span className="scale-75 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-rose-600 opacity-0 shadow-lg transition duration-500 group-hover:scale-100 group-hover:opacity-100">
-                      View Memory 🔍
+                      View 🔍
                     </span>
 
                   </div>
